@@ -43,7 +43,16 @@ bool cmp(pair<int, int>el1, pair<int,int>el2) {
 
 
 int main() {
-    
+	
+    vector<vector<int>>t(10,(vector<int>(10,0)));
+
+    // sorts the 2D array in decreasing order of their seconds
+    // t = [[5,10],[2,5],[4,7],[3,9]]
+    // after sorting: [[5,10],[3,9],[4,7],[2,5]]
+    sort(t.begin(), t.end(), [](const vector<int>&a, vector<int>&b) {
+            return b[1]>a[1];
+    });
+	
     int n;
     cin>>n;
     int *arr = new int[n];
