@@ -50,7 +50,7 @@ int main() {
     // t = [[5,10],[2,5],[4,7],[3,9]]
     // after sorting: [[5,10],[3,9],[4,7],[2,5]]
     sort(t.begin(), t.end(), [](const vector<int>&a, vector<int>&b) {
-            return b[1]>a[1];
+            return a[1]>b[1];
     });
 	
     int n;
